@@ -1,0 +1,19 @@
+{
+    "name": "tobya/anymodel",
+    "description": "Allows creation of a Laravel Entity Model for an arbitrary table",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Tobya\\Anymodel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Toby Allen",
+            "email": "toby@toflidium.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
