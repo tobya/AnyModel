@@ -1,6 +1,6 @@
 ## AnyModel
 
-### Allows creation of a Laravel Entity Model for an arbitrary table
+### Allows creation of a Laravel Entity Model for an arbitrary table or view
 
 Allow creation of Laravel Entity Model for any arbitrary table without needing to declare a Model first.
 
