@@ -14,7 +14,7 @@ class AnyModel extends Model
 
     public static function table($tablename, $options = []){
 
-        // Create a new Model  and set its table and primary key.
+        // Create a new Model  and set its table
         $Model = new AnyModel();
         $Model->table = $tablename;
 
