@@ -10,7 +10,6 @@ class AnyModel extends Model
 {
 
     public $timestamps = false;
-    protected $primaryKey; // increase visibility of primaryKey to allow it to be set in options
 
 
     public static function table($tablename, $options = []){
@@ -26,6 +25,14 @@ class AnyModel extends Model
 
         return $Model;
     }
+    public function getIDattribute(){
+        // due to various contortions Model->id will not always be available and it is not possible to set
+        // primaryKey and have it work so if it is requested and does not exist rather than returning '' (default behaviour)
+        // raise an error.
+        if (!isset($this->{$this->primaryKey})){
+            throw new \Exception('AnyModel::id does not have a value.  Please specify actual id field name');
+        }
 
+    }
 
 }
