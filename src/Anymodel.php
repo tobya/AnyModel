@@ -6,7 +6,7 @@ namespace Tobya\Anymodel;
 use Illuminate\Database\Eloquent\Model;
 
 
-class AnyModel extends Model
+class Anymodel extends Model
 {
 
     public $timestamps = false;
@@ -15,7 +15,7 @@ class AnyModel extends Model
     public static function table($tablename, $options = []){
 
         // Create a new Model  and set its table
-        $Model = new AnyModel();
+        $Model = new Anymodel();
         $Model->table = $tablename;
 
         // Set any further options passed in before returning
@@ -30,7 +30,7 @@ class AnyModel extends Model
         // primaryKey and have it work so if it is requested and does not exist rather than returning '' (default behaviour)
         // raise an error.
         if (!isset($this->{$this->primaryKey})){
-            throw new \Exception('AnyModel::id does not have a value.  Please specify actual id field name');
+            throw new \Exception('Anymodel::id does not have a value.  Please specify actual id field name');
         }
 
     }
