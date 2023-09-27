@@ -10,7 +10,7 @@ class AnyModel extends Model
 {
 
     public $timestamps = false;
-
+    protected $guarded = [];
 
     public static function table($tablename, $options = []){
 
