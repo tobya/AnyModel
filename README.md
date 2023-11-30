@@ -23,4 +23,6 @@ that uses Views and you do not wish to create a model for each view.
 
 ### Installation
 
-> composer require tobya/anymodel
+````
+ composer require tobya/anymodel
+````
