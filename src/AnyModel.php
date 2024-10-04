@@ -26,12 +26,14 @@ class AnyModel extends Model
         return $Model;
     }
     public function getIDattribute(){
-        // due to various contortions Model->id will not always be available and it is not possible to set
+
+        // due to various contortions Model->id will not always be available. If it is not set via
         // primaryKey and have it work so if it is requested and does not exist rather than returning '' (default behaviour)
         // raise an error.
-        if (!isset($this->{$this->primaryKey})){
+        if (!isset($this->attributes[$this->primaryKey])){
             throw new \Exception('AnyModel::id does not have a value.  Please specify actual id field name');
         }
+        return $this->attributes[$this->primaryKey];
 
     }
 
