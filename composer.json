@@ -15,5 +15,8 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require-dev": {
+        "pestphp/pest": "3.x-dev",
+        "laravel/framework": "7.*|8.*|9.*|10.*|11.*"
+    }
 }
