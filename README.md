@@ -26,3 +26,20 @@ that uses Views and you do not wish to create a model for each view.
 ````
  composer require tobya/anymodel
 ````
+### Concerns
+
+Anymodel package comes with some concerns
+
+> use HasNoTable;
+
+> use BasedonView;
+
+HasNoTable should be used for a model where you do not wish for a save to be possible.
+This is useful for Views. BasedonView is an alias for HasNoTable.
+
+> use HasCustomPrimaryKey;
+
+Some older tables do not use id as the primary key and the new primary key can be set on the model.
+However if you call \$model->id in your code you will get a null rather than the correct
+value or an exception.  This will correctly return the primaryKey value when $model->id 
+is requested.
