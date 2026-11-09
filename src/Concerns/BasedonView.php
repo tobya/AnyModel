@@ -5,7 +5,7 @@
   /**
    * Alias for HasNoTable
    */
-  trait BasedOnView
+  trait BasedonView
   {
 
       use HasNoTable;
